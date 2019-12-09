@@ -1,0 +1,12 @@
+//Items
+item.ruby.name=Ruby
+item.tape_player.name=Tape Player
+
+//Food
+item.evil_apple.name=Evil Apple
+
+//Blocks
+tile.ruby_block.name=Ruby Block
+
+//Creative Tabs
+itemGroup.tab_minechuck=MineChuck Mod Tab
