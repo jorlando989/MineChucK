@@ -13,8 +13,6 @@ public class RubyBlock extends BlockBase {
 		setResistance(15.0f);
 		setHarvestLevel("pickaxe", 2);
 		setLightLevel(1.0f);
-//		setLightOpacity(1);
-//		setBlockUnbreakable();
 	}
 	
 }

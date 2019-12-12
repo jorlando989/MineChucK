@@ -7,6 +7,7 @@ item.evil_apple.name=Evil Apple
 
 //Blocks
 tile.ruby_block.name=Ruby Block
+tile.osc_block.name=OSC Block
 
 //Creative Tabs
 itemGroup.tab_minechuck=MineChuck Mod Tab
