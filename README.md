@@ -2,6 +2,8 @@
 a minecraft mod using OSC and ChucK
 - implements Open Sound Control via OscP5
 ---
+See a demonstration here: [MineChucK demonstration](https://youtu.be/eLeWabVfch0)
+---
 ### Features:
 	- OSC Blocks create a persistent sound when placed. 
 	  Sound changes based on their position in the world.
@@ -15,7 +17,7 @@ a minecraft mod using OSC and ChucK
 		- Forge 14.23.5.2768
 		- MiniAudicle
 		- Eclipse 
-		(for help setting up project, refer to: https://www.youtube.com/watch?v=rmWBP5ifDlw&list=PLDhiRTZ_vnoX4bx_BJccGV7MjpXUfVJSn)
+	(for help setting up project, refer to: [Setting Up the Workspace Tutorial](https://www.youtube.com/watch?v=rmWBP5ifDlw&list=PLDhiRTZ_vnoX4bx_BJccGV7MjpXUfVJSn)
 	1. Open Minechuck Mod project in Eclipse
 	2. Open minechuck_receiver.ck in MiniAudicle
 	3. In Eclipse, open Main.java and click the run button. This should open an instance of Minecraft with the mod running.
