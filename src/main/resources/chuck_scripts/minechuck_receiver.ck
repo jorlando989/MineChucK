@@ -13,7 +13,7 @@ public class Audio{
     
     fun void boom(float rmix, NRev r, Gain g, SndBuf sb){
         rmix => r.mix;
-        0.5 => g.gain;
+        0.1 => g.gain;
         sb => g;
         300::ms => now;
     }
@@ -23,7 +23,7 @@ public class Audio{
         // play a sound based on x,y,z and have it fade out
         
         Gain g => NRev r => dac;
-        0.5 => g.gain;
+        0.1 => g.gain;
         0.1 => r.mix;
         SndBuf sb;
         
