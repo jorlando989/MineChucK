@@ -35,14 +35,14 @@ public class OscBlock extends BlockBase {
 	Boolean updateNow;	
 	
     public OscBlock (String name, Material material) {
-            super(name, material);
-            
-            setSoundType(SoundType.METAL);
-    		setHardness(5.0f);
-    		setResistance(15.0f);
-    		setHarvestLevel("pickaxe", 2);
-            
-            System.out.println("************** NEW BLOCK");
+        super(name, material);
+        
+        setSoundType(SoundType.METAL);
+		setHardness(5.0f);
+		setResistance(15.0f);
+		setHarvestLevel("pickaxe", 2);
+        
+        System.out.println("************** NEW BLOCK");
     }
     
     //@Override

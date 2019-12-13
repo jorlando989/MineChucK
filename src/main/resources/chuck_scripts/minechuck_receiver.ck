@@ -10,6 +10,13 @@
 */
 
 public class Audio{  
+    
+    fun void boom(float rmix, NRev r, Gain g, SndBuf sb){
+        rmix => r.mix;
+        0.5 => g.gain;
+        sb => g;
+        300::ms => now;
+    }
     /* block_placed audio here */
     fun void block_placed(int debug, int index, int x, int y, int z, int playerid, int serverid, time placedTime){
         //when block is placed
@@ -19,25 +26,24 @@ public class Audio{
         0.5 => g.gain;
         0.1 => r.mix;
         SndBuf sb;
-
+        
+        ["kick_01.wav", "kick_04.wav", "clap_01.wav", "click_01.wav", "click_02.wav",
+            "hihat_01.wav", "hihat_02.wav", "hihat_04.wav", "hihat_01.wav", "snare_01.wav",
+            "snare_02.wav", "snare_03.wav"] @=> string files[];
+        
         // load file
-        me.dir() + "kick.wav" => sb.read;
+        Std.ftoi(Math.floor((Std.fabs(x)/4))) % files.size() => int choice;
+        <<<"choice:", choice>>>;
+        <<<"test", Std.ftoi(Math.floor((Std.fabs(x)/4))) % files.size()>>>;
+        me.dir() + files[choice] => sb.read;
 
         0.1 => float rmix;
         repeat(2){
-            spork ~ boom(rmix);
-            150::ms => now;
+            spork ~ boom(rmix, r, g, sb);
+            (Std.fabs(y) + 50)::ms => now;
             rmix + 0.3 => rmix;
         }
         2::second => now;
-
-        // connect to gain
-        fun void boom(float rmix){
-            rmix => r.mix;
-            0.5 => g.gain;
-            sb => g;
-            300::ms => now;
-        }   
         
         if( debug )
             <<< "receive_block_placed: " + index, x, y, z, playerid, serverid, placedTime >>>;                
